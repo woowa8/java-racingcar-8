@@ -30,7 +30,7 @@ public class Car {
     }
 
     private void validatePos(int newPos) {
-        if (this.pos < 0) {
+        if (newPos < 0) {
             throw new IllegalArgumentException("[ERROR] 자동차의 위치는 음수일 수 없습니다.");
         }
     }
