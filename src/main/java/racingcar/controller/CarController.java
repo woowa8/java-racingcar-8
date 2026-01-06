@@ -38,6 +38,7 @@ public class CarController {
             throw e;  // assertThatThrownBy() 이므로, 다시 던지기
         }
 
+        outputView.printTitle();
         for(int i = 0; i < roop; i++) {
             drive(cars);
             outputView.printCarRacing(cars);
