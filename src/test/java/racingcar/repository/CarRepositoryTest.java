@@ -2,6 +2,8 @@ package racingcar.repository;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.Test;
 import racingcar.domain.Car;
 
@@ -16,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 2. null이 나올 경우 테스트 (이름이 없을 경우)
 3. findCarsByPos의 경우, 같은 위치이면 여러 사람이 나오는지 test
  */
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class CarRepositoryTest {
 
     private CarRepository carRepository;
