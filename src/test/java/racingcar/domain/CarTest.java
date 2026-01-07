@@ -69,6 +69,18 @@ class CarTest {
     }
 
     @Test
+    void 이름은_빈칸일_수_없다() {
+        //given
+
+        //when
+
+        //then
+        Assertions.assertThatThrownBy(() -> new Car(""))
+                .isInstanceOf(IllegalArgumentException.class)    // 예외가 나오는 조건을 안에 넣는다.
+                .hasMessageContaining("[ERROR]");
+    }
+
+    @Test
     void 이동_테스트() {
         //given
         Car car = new Car("sunJ");
